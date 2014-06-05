@@ -20,3 +20,16 @@ class Instructor < Person
 		puts "Everything in Ruby is an Object"
 	end
 end
+
+#QUESTION 6
+chris = Instructor.new('Chris')
+chris.greeting
+#QUESTION 7
+christina = Student.new("Christina")
+christina.greeting
+
+chris.teach
+christina.learn
+christina.teach #returns undefined method 'teach' for student
+#this doesn't work because christina is not in the instructor class, and therefore has no access to 
+#instructor methods. students also don't inherit from instructors according to this hierarchy
